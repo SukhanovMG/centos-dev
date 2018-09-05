@@ -1,9 +1,8 @@
 FROM centos:7
 
 RUN    yum install -y epel-release \
-    && yum install -y gcc gcc-c++ make cmake libconfig libconfig-devel jansson-devel \
-    && yum install -y luajit luajit-devel postgresql postgresql-devel zeromq zeromq-devel \
-    && yum install -y yasm \
+    && yum install -y gcc gcc-c++ make cmake libconfig libconfig-devel jansson-devel luajit luajit-devel postgresql postgresql-devel  \
+       zeromq zeromq-devel libev libev-devel libxml2 libxml2-devel yasm openssl openssl-devel openssl-libs libuuid libuuid-devel \
     && yum clean all && rm -rf /var/cache/yum
 
 # install ffmpeg
