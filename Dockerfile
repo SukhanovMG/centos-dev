@@ -6,7 +6,7 @@ RUN    yum install -y epel-release \
        zeromq zeromq-devel libev libev-devel libxml2 libxml2-devel yasm openssl openssl-devel openssl-libs libuuid libuuid-devel \
        libcurl libcurl-devel libical libical-devel \
        \
-       iproute \
+       iproute valgrind gdb mc \
        \
     && yum clean all && rm -rf /var/cache/yum
 
@@ -19,3 +19,6 @@ RUN    tar -xzf ffmpeg-3.4.4.tar.gz \
     && make -j2 && make install && cd /build/ && rm -r ffmpeg
 
 WORKDIR /
+RUN  mkdir -p .config/mc && chmod 777 ./.config/mc \
+  && mkdir -p .cache/mc && chmod 777 ./.config/mc \
+  && mkdir -p .local/share/mc && chmod 777 ./.local/share/mc
