@@ -3,7 +3,7 @@ FROM centos:7
 RUN    yum install -y epel-release \
        \
     && yum install -y gcc gcc-c++ make cmake libconfig libconfig-devel jansson-devel luajit luajit-devel postgresql postgresql-devel  \
-       zeromq zeromq-devel libev libev-devel libxml2 libxml2-devel yasm openssl openssl-devel openssl-libs libuuid libuuid-devel \
+       zeromq zeromq-devel cppzmq-devel libev libev-devel libxml2 libxml2-devel yasm openssl openssl-devel openssl-libs libuuid libuuid-devel \
        libcurl libcurl-devel libical libical-devel \
        \
        iproute valgrind gdb mc \
